@@ -12,43 +12,6 @@ a {
   text-decoration: none;
 }
 
-/* задаємо шинину paddings, margin для всіх блоків */
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.effective-solutions {
-  max-width: 1158px;
-  padding: 120 15px;
-  margin: 0 auto;
-}
-
-.features {
-  max-width: 1158px;
-  padding: 120 15px;
-  margin: 0 auto;
-}
-
-.team {
-  max-width: 1158px;
-  padding: 120 15px;
-  margin: 0 auto;
-}
-
-.portfolio {
-  max-width: 1158px;
-  padding: 120 15px;
-  margin: 0 auto;
-}
-
-.bottom {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 /* правила для скидання дефолтного підкреслення, margin, padding для маркерів у списках */
 ul,
 ol {
@@ -68,6 +31,56 @@ p {
   margin: 0;
 }
 
+/* задаємо шинину paddings, margin для всіх блоків */
+.container {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.effective-solutions {
+  max-width: 1440px;
+  padding: 120 15px;
+  margin: 0 auto;
+}
+
+.features {
+  max-width: 1440px;
+  padding: 120 15px;
+  margin: 0 auto;
+}
+
+.features-contr {
+  padding: 120px 156px;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+
+.features-list-item {
+  width: calc(100%-72px) / 4;
+}
+
+.team {
+  max-width: 1158px;
+  padding: 120 15px;
+  margin: 0 auto;
+}
+
+.portfolio {
+  max-width: 1158px;
+  padding: 120 15px;
+  margin: 0 auto;
+}
+
+.bottom {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
@@ -75,6 +88,7 @@ p {
 .header-container {
   display: flex;
   align-items: center;
+  max-width: 1158px;
 }
 
 .header-nav {
@@ -123,10 +137,6 @@ p {
   color: #2e2f42;
 }
 
-.address {
-  margin-left: auto;
-}
-
 /* правила для інтеактивних елементів, кнопок і посилань */
 .nav-link {
   display: block;
@@ -141,6 +151,7 @@ p {
 
 .address {
   font-style: normal;
+  margin-left: auto;
 }
 
 .address-link {
@@ -182,28 +193,22 @@ p {
 }
 
 .button {
-  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
   background-color: #4d5ae5;
+  cursor: pointer;
   display: block;
   margin: 48px auto 0;
   border-radius: 4px;
   padding: 16px 32px;
 }
 
-.button:hover {
-  background-color: #404bbf;
-}
-
+.button:hover,
 .button:focus {
   background-color: #404bbf;
-}
-
-.effective-solutions .button {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
 }
 
 .features-hdr-three {
@@ -217,10 +222,19 @@ p {
   line-height: 1.5;
   color: #434455;
   letter-spacing: 0.02em;
+  padding-top: 8px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+  margin-top: 72px;
 }
 
 .team {
   background-color: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .team-hdr-two {
@@ -231,6 +245,7 @@ p {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
+  padding-top: 120px;
 }
 
 .team-hdr-three {
@@ -238,7 +253,9 @@ p {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  text-align: center;
   color: #2e2f42;
+  padding: 32px 49px 32px;
 }
 
 .team-item {
@@ -247,8 +264,17 @@ p {
 
 .team-txt {
   line-height: 1.5;
+  text-align: center;
   color: #434455;
   letter-spacing: 0.02em;
+  padding: 8px auto 32px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 72px;
 }
 
 .portfolio-header {
@@ -259,6 +285,7 @@ p {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
+  padding-top: 120px;
 }
 
 .portfolio-hdr-three {
@@ -267,17 +294,26 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 32px auto 8px 16px;
 }
 
 .portfolio-text {
   line-height: 1.5;
   color: #434455;
   letter-spacing: 0.02em;
+  padding: 8px auto 32px 16px;
 }
 
 .bottom {
   background-color: #2e2f42;
   color: #f4f4fd;
+}
+
+.bottom-contr {
+  margin: 100px 156px;
+  max-width: 264px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .bottom .logo-ws {
@@ -287,4 +323,5 @@ p {
 .bottom-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding-top: 16px;
 }
