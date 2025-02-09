@@ -16,8 +16,9 @@ a {
 ul,
 ol {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 /* скидаєм геометрію для заголовків і параграфів */
@@ -28,34 +29,52 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* задаємо шинину paddings, margin для всіх блоків */
 .container {
-  max-width: 1440px;
+  max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .effective-solutions {
-  max-width: 1440px;
   padding: 120 15px;
   margin: 0 auto;
 }
 
 .features {
-  max-width: 1440px;
   padding: 120 15px;
   margin: 0 auto;
 }
 
 .features-contr {
-  padding: 120px 156px;
+  padding: 120px 15px;
 }
 
 .features-list {
   display: flex;
+  justify-content: center;
   gap: 24px;
 }
 
@@ -63,20 +82,12 @@ p {
   width: calc(100%-72px) / 4;
 }
 
-.team {
-  max-width: 1158px;
-  padding: 120 15px;
-  margin: 0 auto;
-}
-
 .portfolio {
-  max-width: 1158px;
   padding: 120 15px;
   margin: 0 auto;
 }
 
 .bottom {
-  max-width: 1440px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -170,14 +181,17 @@ p {
   color: #404bbf;
 }
 
+.effective-solutions-contr {
+  padding: 148px 15px;
+}
+
 /* оформлення основних секцій */
 .effective-solutions {
-  height: 600px;
   background-color: #2e2f42;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  gap: 48px;
+  justify-content: center;
+  align-items: center;
 }
 
 .esolutions-hdr {
@@ -188,7 +202,6 @@ p {
   letter-spacing: 0.02em;
   text-align: center;
   max-width: 496px;
-  /* /* padding: 188px 0 48px; * */
   margin: 0 auto 48px;
 }
 
@@ -225,16 +238,18 @@ p {
   padding-top: 8px;
 }
 
+.team-contr {
+  padding: 120px 15px;
+}
+
 .team-list {
   display: flex;
   gap: 24px;
-  margin-top: 72px;
 }
 
 .team {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  margin: 0 auto;
 }
 
 .team-hdr-two {
@@ -245,7 +260,7 @@ p {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
-  padding-top: 120px;
+  margin-bottom: 72px;
 }
 
 .team-hdr-three {
@@ -255,11 +270,16 @@ p {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding: 32px 49px 32px;
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 
 .team-item {
   background-color: #ffffff;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  border-radius: 0 0 4px 4px;
+  padding-bottom: 32px;
 }
 
 .team-txt {
@@ -267,14 +287,23 @@ p {
   text-align: center;
   color: #434455;
   letter-spacing: 0.02em;
-  padding: 8px auto 32px;
+}
+
+.portfolio .container {
+  padding: 120px 15px;
 }
 
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 48px 24px;
   margin-top: 72px;
+}
+
+.portfolio-list-item {
+  width: calc((100% - 48px) / 3);
+  border: 1px solid #e7e9fc;
+  box-sizing: border-box;
 }
 
 .portfolio-header {
@@ -285,7 +314,6 @@ p {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
-  padding-top: 120px;
 }
 
 .portfolio-hdr-three {
@@ -294,14 +322,14 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding: 32px auto 8px 16px;
+  margin: 32px 0 8px 16px;
 }
 
 .portfolio-text {
   line-height: 1.5;
   color: #434455;
   letter-spacing: 0.02em;
-  padding: 8px auto 32px 16px;
+  margin: 0 0 32px 16px;
 }
 
 .bottom {
@@ -310,10 +338,8 @@ p {
 }
 
 .bottom-contr {
-  margin: 100px 156px;
-  max-width: 264px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin: 0 156px;
+  padding: 100px 15px;
 }
 
 .bottom .logo-ws {
@@ -323,5 +349,6 @@ p {
 .bottom-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding-top: 16px;
+  width: 264px;
+  margin-top: 16px;
 }
