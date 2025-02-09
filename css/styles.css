@@ -83,13 +83,13 @@ img {
   justify-content: center;
   gap: 24px;
 }
-
+/* 
 .features-list-item:first-child {
   width: calc((100% - 72px) / 4);
-}
+} */
 
 .features-list-item {
-  flex-basis: calc(100%-72px) / 4;
+  flex-basis: calc((100%-72px) / 4);
 }
 
 .portfolio {
@@ -315,7 +315,7 @@ img {
 }
 
 .portfolio-list-item {
-  width: calc((100% - 48px) / 3);
+  width: calc((100%-48px) / 3);
   border: 1px solid #e7e9fc;
   box-sizing: border-box;
 }
