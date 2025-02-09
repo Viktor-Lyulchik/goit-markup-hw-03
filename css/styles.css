@@ -52,6 +52,11 @@ img {
 }
 
 /* задаємо шинину paddings, margin для всіх блоків */
+.section {
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+}
+
 .container {
   max-width: 1158px;
   padding: 0 15px;
